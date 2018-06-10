@@ -1,0 +1,35 @@
+.header{
+    padding-top: 50px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.title{
+    font-size: 32px;
+}
+
+.hide{
+    display: none;
+}
+
+.search{
+    padding-top: 10px;
+    vertical-align: middle;
+    text-align: center;
+    height: 150px;
+}
+
+.add{
+    padding-top: 10px;
+    vertical-align: middle;
+    text-align: center;
+    height: 100px;
+}
+
+.form-control{
+    margin: 5px;
+}
+
+body{
+    background-color: #f9f9f9;
+}
