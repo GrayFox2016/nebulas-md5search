@@ -8,8 +8,15 @@
     font-size: 32px;
 }
 
-.hide{
-    display: none;
+/*.hide{*/
+    /*display: none;*/
+/*}*/
+
+.noExtension {
+    padding-top: 100px;
+    vertical-align: middle;
+    text-align: center;
+    height: 100px;
 }
 
 .search{
@@ -20,7 +27,7 @@
 }
 
 .add{
-    padding-top: 10px;
+    padding-top: 50px;
     vertical-align: middle;
     text-align: center;
     height: 100px;
