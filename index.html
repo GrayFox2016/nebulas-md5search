@@ -46,14 +46,14 @@
     var Transaction = require("nebulas").Transaction;
     var Unit = require("nebulas").Unit;
     var neb = new Neb();
-    neb.setRequest(new HttpRequest("https://testnet.nebulas.io"));
+    neb.setRequest(new HttpRequest("https://mainnet.nebulas.io"));
 
     var NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
     var nebPay = new NebPay();
     var serialNumber;
     var intervalQuery;
-    //var callbackUrl = NebPay.config.mainnetUrl;   //如果合约在主网,则使用这个
-    var callbackUrl = NebPay.config.testnetUrl;   //
+    var callbackUrl = NebPay.config.mainnetUrl;   //如果合约在主网,则使用这个
+    // var callbackUrl = NebPay.config.testnetUrl;   //
 
     $("#searchButton").click(function () {
         var md5Value = $("#searchValue").val();
