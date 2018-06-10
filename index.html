@@ -134,9 +134,6 @@
                 if (respObject.code === 0) {
                     clearInterval(intervalQuery);
                     alert(`保存 ${$("#hash").val()} 成功!`);
-                } else {
-                    clearInterval(intervalQuery);
-                    alert(`保存 ${$("#hash").val()} 失败!可能已经被其他用户提交`);
                 }
             })
             .catch(function (err) {
