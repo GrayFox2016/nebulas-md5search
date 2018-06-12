@@ -28,17 +28,28 @@
     </div>
 
     <div class="add">
-        <input title="hash" id="hash" class="form-control" placeholder="请输入32位MD5值">
-        <input title="source" id="source" class="form-control" placeholder="请输入明文">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="请输入32位MD5值" id="hash">
+        </div>
+        <br>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="请输入明文" id="source">
+        </div>
+        <!--<br>-->
+
+        <!--<input title="hash" id="hash" class="form-control" placeholder="请输入32位MD5值">-->
+        <!--<input title="source" id="source" class="form-control" placeholder="请输入明文">-->
         <button class="btn btn-success submit" id="addButton">添加</button>
-        <span id="addResult"></span>
+        <div id="addResult"></div>
     </div>
 
     <div class="noExtension hide" id="noExtension">
         <div>
-            若未安装星云web钱包插件，请先安装
+            添加条目需要安装星云web钱包插件，请先安装
         </div>
         <a target="_blank" href="https://github.com/nebulasio/WebExtensionWallet">WebExtensionWallet</a>
+        <br>
+        <a target="_blank" href="http://tool.chinaz.com/Tools/md5.aspx">MD5校验</a>
     </div>
 </div>
 
@@ -102,6 +113,7 @@
 
     $("#addButton").click(function () {
 
+        $("#addResult").text("");
         var to = dappAddress;
         var value = "0";
         var callFunction = "save"
@@ -113,7 +125,7 @@
             return;
         }
         if (arg1 !== MD5(arg2)) {
-            $("#addResult").text("请输入正确的MD5与明文值");
+            $("#addResult").text("MD5与明文值校验未通过");
             return;
         }
 
@@ -139,7 +151,7 @@
                 var respObject = JSON.parse(resp)
                 if (respObject.code === 0) {
                     clearInterval(intervalQuery);
-                    alert(`保存 ${$("#hash").val()} 成功!`);
+                    $("#addResult").text(`保存 ${$("#hash").val()} 成功!`);
                 }
             })
             .catch(function (err) {

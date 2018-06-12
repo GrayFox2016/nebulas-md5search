@@ -13,7 +13,7 @@
 /*}*/
 
 .noExtension {
-    padding-top: 100px;
+    padding-top: 200px;
     vertical-align: middle;
     text-align: center;
     height: 100px;
@@ -33,9 +33,9 @@
     height: 100px;
 }
 
-.form-control{
-    margin: 5px;
-}
+/*.form-control{*/
+    /*margin: 5px;*/
+/*}*/
 
 body{
     background-color: #f0f0f0;
