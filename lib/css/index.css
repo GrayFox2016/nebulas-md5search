@@ -1,7 +1,11 @@
 .header{
-    padding-top: 50px;
+    /*padding-top: 50px;*/
     vertical-align: middle;
     text-align: center;
+}
+
+.top{
+    margin-top: 10px;
 }
 
 .title{
@@ -13,7 +17,7 @@
 /*}*/
 
 .noExtension {
-    padding-top: 200px;
+    padding-top: 150px;
     vertical-align: middle;
     text-align: center;
     height: 100px;
